@@ -248,8 +248,8 @@ const AnnouncementModal = ({ open, onClose, announcementId, reload }) => {
                         name="status"
                         error={touched.status && Boolean(errors.status)}
                       >
-                        <MenuItem value={true}>Ativo</MenuItem>
-                        <MenuItem value={false}>Inativo</MenuItem>
+                        <MenuItem value={true}>Activo</MenuItem>
+                        <MenuItem value={false}>Inactivo</MenuItem>
                       </Field>
                     </FormControl>
                   </Grid>
@@ -270,8 +270,8 @@ const AnnouncementModal = ({ open, onClose, announcementId, reload }) => {
                         error={touched.priority && Boolean(errors.priority)}
                       >
                         <MenuItem value={1}>Alta</MenuItem>
-                        <MenuItem value={2}>Média</MenuItem>
-                        <MenuItem value={3}>Baixa</MenuItem>
+                        <MenuItem value={2}>Media</MenuItem>
+                        <MenuItem value={3}>Baja</MenuItem>
                       </Field>
                     </FormControl>
                   </Grid>
