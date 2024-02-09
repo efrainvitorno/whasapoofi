@@ -281,7 +281,6 @@ async function handleSendScheduledMessage(job) {
       sentAt: moment().format("YYYY-MM-DD HH:mm"),
       status: "ENVIADA"
     });
-e
     logger.info(`Mensaje programado enviado a: ${schedule.contact.name}`);
     sendScheduledMessages.clean(15000, "completed");
   } catch (e: any) {
