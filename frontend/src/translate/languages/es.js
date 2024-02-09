@@ -351,7 +351,7 @@ const messages = {
 			},
 		  },
 		  ticketsQueueSelect: {
-			placeholder: "Colas",
+			placeholder: "Areas",
 		  },
 		  tickets: {
 			toasts: {
@@ -452,7 +452,7 @@ const messages = {
 			confirmationModal: {
 			  deleteTitle: "Eliminar",
 			  deleteMessage:
-				"¿Estás seguro? ¡Esta acción no se puede deshacer! y será eliminada de las colas y conexiones vinculadas",
+				"¿Estás seguro? ¡Esta acción no se puede deshacer! y será eliminada de las Areas y conexiones vinculadas",
 			},
 		  },
 		  files: {
@@ -736,7 +736,7 @@ const messages = {
 			},
 		  },
 		  queueSelect: {
-			inputLabel: "Colas",
+			inputLabel: "Areas",
 		  },
 		  users: {
 			title: "Colaboradores",

@@ -95,7 +95,7 @@ async function handleSendMessage(job) {
 }
 
 async function handleVerifyQueue(job) {
-  logger.info("Buscando citas perdidas en colas");
+  logger.info("Buscando citas perdidas en areas");
   try {
     const companies = await Company.findAll({
       attributes: ['id', 'name'],
