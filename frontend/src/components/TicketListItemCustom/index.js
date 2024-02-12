@@ -416,7 +416,7 @@ const useStyles = makeStyles((theme) => ({
                 color="textPrimary"
               >
                 {ticket.contact.name}
-                {profile === "admin" && (
+                {(profile === "admin" || profile === "user" || profile === "superv") && (
                   <Tooltip title="Espiar">
                     <VisibilityIcon
                       onClick={() => setOpenTicketMessageDialog(true)}

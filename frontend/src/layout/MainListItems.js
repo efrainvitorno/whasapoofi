@@ -377,6 +377,121 @@ const MainListItems = (props) => {
       />
       <Can
         role={user.profile}
+        perform="drawer-superv-items:view"
+        yes={() => (
+          <>
+            <Divider />
+            <ListSubheader
+              hidden={collapsed}
+              style={{
+                position: "relative",
+                fontSize: "17px",
+                textAlign: "left",
+                paddingLeft: 20
+              }}
+              inset
+              color="inherit">
+              {i18n.t("mainDrawer.listItems.administration")}
+            </ListSubheader>
+
+            {showCampaigns && (
+              <>
+                <ListItem
+                  button
+                  onClick={() => setOpenCampaignSubmenu((prev) => !prev)}
+                >
+                  <ListItemIcon>
+                    <EventAvailableIcon />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={i18n.t("mainDrawer.listItems.campaigns")}
+                  />
+                  {openCampaignSubmenu ? (
+                    <ExpandLessIcon />
+                  ) : (
+                    <ExpandMoreIcon />
+                  )}
+                </ListItem>
+                <Collapse
+                  style={{ paddingLeft: 15 }}
+                  in={openCampaignSubmenu}
+                  timeout="auto"
+                  unmountOnExit
+                >
+                  <List component="div" disablePadding>
+                    <ListItem onClick={() => history.push("/campaigns")} button>
+                      <ListItemIcon>
+                        <ListIcon />
+                      </ListItemIcon>
+                      <ListItemText primary="Lista de Campañas" />
+                    </ListItem>
+                    <ListItem
+                      onClick={() => history.push("/contact-lists")}
+                      button
+                    >
+                      <ListItemIcon>
+                        <PeopleIcon />
+                      </ListItemIcon>
+                      <ListItemText primary="Lista de Contactos" />
+                    </ListItem>
+                    <ListItem
+                      onClick={() => history.push("/campaigns-config")}
+                      button
+                    >
+                      <ListItemIcon>
+                        <SettingsOutlinedIcon />
+                      </ListItemIcon>
+                      <ListItemText primary="Configuraciones" />
+                    </ListItem>
+                  </List>
+                </Collapse>
+              </>
+            )}
+            {user.super && (
+              <ListItemLink
+                to="/announcements"
+                primary={i18n.t("mainDrawer.listItems.annoucements")}
+                icon={<AnnouncementIcon />}
+              />
+            )}
+            <ListItemLink
+              to="/connections"
+              primary={i18n.t("mainDrawer.listItems.connections")}
+              icon={
+                <Badge badgeContent={connectionWarning ? "!" : 0} color="error">
+                  <SyncAltIcon />
+                </Badge>
+              }
+            />
+            <ListItemLink
+              to="/files"
+              primary={i18n.t("mainDrawer.listItems.files")}
+              icon={<AttachFile />}
+            />
+            <ListItemLink
+              to="/queues"
+              primary={i18n.t("mainDrawer.listItems.queues")}
+              icon={<AccountTreeOutlinedIcon />}
+            />
+            <ListItemLink
+              to="/users"
+              primary={i18n.t("mainDrawer.listItems.users")}
+              icon={<PeopleAltOutlinedIcon />}
+            
+            />
+
+            <ListItemLink
+              to="/settings"
+              primary={i18n.t("mainDrawer.listItems.settings")}
+              icon={<SettingsOutlinedIcon />}
+            />
+            { }
+
+          </>
+        )}
+      />
+      <Can
+        role={user.profile}
         perform="drawer-admin-items:view"
         yes={() => (
           <>

@@ -45,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    marginTop: "12.5px",
   },
   paper: {
     background: "white",
@@ -69,6 +68,17 @@ const useStyles = makeStyles((theme) => ({
   },
   whatsappButton: {
     margin: theme.spacing(3, 0, 2),
+    background: "#25d366", // Color de WhatsApp
+    color: "#fff", // Texto blanco
+    "&:hover": {
+      backgroundColor: "#128C7E", // Color de fondo cuando se pasa el ratón
+    },
+    position: "fixed",
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+  },
+  footer: {
+    marginTop: theme.spacing(2),
   },
 }));
 
@@ -313,8 +323,7 @@ const SignUp = () => {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  className={classes.whatsappButton}
-                  startIcon={<WhatsAppIcon />}
+                  className={classes.submit}
                   onClick={handleWhatsAppClick}
                 >
                   Solicitar Código
@@ -344,11 +353,22 @@ const SignUp = () => {
             )}
           </Formik>
         </div>
-        <Box mt={5}></Box>
+        <Box mt={5} className={classes.footer}>
+          <Typography variant="body2" color="textSecondary" align="center">
+            {i18n.t("© 2021-2024 TI Aventura Digital™ ")}<br />
+            {i18n.t(" RUC 20610803157")}
+          </Typography>
+        </Box>
       </Container>
+      <Button
+        variant="contained"
+        className={classes.whatsappButton}
+        onClick={() => window.open("https://api.whatsapp.com/send?phone=51925465788&text=*Hola, necesito soporte en el CRM de WhatsApp*")}
+      >
+        <WhatsAppIcon /> Soporte por WhatsApp
+      </Button>
     </div>
   );
 };
 
 export default SignUp;
-

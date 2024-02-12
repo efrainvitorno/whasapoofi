@@ -2,6 +2,16 @@ const rules = {
 	user: {
 		static: [],
 	},
+	superv: {
+		static: [
+			"dashboard:view",
+			"drawer-superv-items:view",
+			"tickets-manager:showall",
+			"user-modal:editProfile",
+			"user-modal:editQueues",
+			"ticket-options:deleteTicket",
+		],
+	},
 
 	admin: {
 		static: [
@@ -16,6 +26,7 @@ const rules = {
 			"connections-page:addConnection",
 			"connections-page:editOrDeleteConnection"
 		],
+		
 	},
 };
 

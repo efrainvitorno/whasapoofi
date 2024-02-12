@@ -98,7 +98,7 @@ export function ContactNotes ({ ticket }) {
             await deleteNote(selectedNote.id)
             await loadNotes()
             setSelectedNote({})
-            toast.success('Observação excluída com sucesso!')
+            toast.success('Nota eliminada exitosamente!')
         } catch (e) {
             toast.error(e)
         }

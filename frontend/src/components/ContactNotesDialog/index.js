@@ -110,7 +110,7 @@ export default function ContactNotesDialog ({ modalOpen, onClose, ticket }) {
             await deleteNote(selectedNote.id)
             await loadNotes()
             setSelectedNote({})
-            toast.success('Observação excluída com sucesso!')
+            toast.success('Nota eliminada exitosamente!')
         } catch (e) {
             toast.error(e)
         }

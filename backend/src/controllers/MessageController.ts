@@ -114,7 +114,7 @@ export const send = async (req: Request, res: Response): Promise<Response> => {
     }
 
     if (messageData.number === undefined) {
-      throw new Error("O número é obrigatório");
+      throw new Error("Numero obligatorio");
     }
 
     const numberToTest = messageData.number;
@@ -179,11 +179,11 @@ export const send = async (req: Request, res: Response): Promise<Response> => {
     
     SetTicketMessagesAsRead(ticket);
 
-    return res.send({ mensagem: "Mensagem enviada" });
+    return res.send({ mensagem: "Mensaje enviado" });
   } catch (err: any) {
     if (Object.keys(err).length === 0) {
       throw new AppError(
-        "Não foi possível enviar a mensagem, tente novamente em alguns instantes"
+        "El mensaje no se pudo enviar, inténtelo nuevamente en unos momentos"
       );
     } else {
       throw new AppError(err.message);
