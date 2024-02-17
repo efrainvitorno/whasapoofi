@@ -634,15 +634,7 @@ const MainListItems = (props) => {
         )}
       />
       <Divider />
-      <li>
-        <ListItem
-          button
-          dense
-          onClick={handleClickLogout}>
-          <ListItemIcon><RotateRight /></ListItemIcon>
-          <ListItemText primary={i18n.t("cerrar sesion")} />
-        </ListItem>
-      </li>
+      
     </div>
   );
 };
