@@ -430,7 +430,7 @@ const messages = {
 			appBar: {
 			  user: {
 				profile: "Perfil",
-				logout: "Salir",
+				logout: "cerrar sesion",
 			  },
 			},
 		  },
