@@ -146,13 +146,15 @@ export default function CheckoutPage(props) {
                 {_renderStepContent(activeStep, setFieldValue, setActiveStep, values)}
 
                 <div className={classes.buttons}>
-                  {activeStep !== 1 && (
+                  {/* Comentado el botón de regresar */}
+                  {/* {activeStep !== 1 && (
                     <Button onClick={_handleBack} className={classes.button}>
                       Regresar
                     </Button>
-                  )}
+                  )} */}
                   <div className={classes.wrapper}>
-                    {activeStep !== 1 && (
+                    {/* Comentado el botón de pagar */}
+                    {/* {activeStep !== 1 && (
                       <Button
                         disabled={isSubmitting}
                         type="button"
@@ -163,7 +165,7 @@ export default function CheckoutPage(props) {
                       >
                         {isLastStep ? "PAGAR" : "PRÓXIMO"}
                       </Button>
-                    )}
+                    )} */}
                     {isSubmitting && (
                       <CircularProgress
                         size={24}

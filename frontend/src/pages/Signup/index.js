@@ -311,7 +311,7 @@ const SignUp = () => {
                     />
                     {validationCode === "wHASAPOV4201D" ? (
                       <Typography variant="body1" style={{ color: 'green', marginTop: '8px' }}>
-                        Código válido. ¡Registro exitoso!
+                        Código válido
                       </Typography>
                     ) : (
                       <div style={{ marginTop: '8px' }}></div>
