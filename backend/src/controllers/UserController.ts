@@ -40,7 +40,7 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
     password,
     name,
     profile,
-    isTricked,
+    
     companyId: bodyCompanyId,
     queueIds,
     whatsappId
@@ -66,7 +66,6 @@ export const store = async (req: Request, res: Response): Promise<Response> => {
     password,
     name,
     profile,
-    isTricked,
     companyId: bodyCompanyId || userCompanyId,
     queueIds,
     whatsappId
