@@ -222,7 +222,7 @@ function PaymentDetails(props) {
                 value={numeroOperacion}
                 onChange={handleNumeroOperacionChange}
                 fullWidth
-                required={(comprobanteType === 'factura' || metodoPago !== '')}
+                required={comprobanteType === 'boleta' || metodoPago === 'BCP'}
                 error={numeroOperacionError !== ''}
                 helperText={numeroOperacionError}
               />
@@ -252,7 +252,7 @@ function PaymentDetails(props) {
               color="primary"
               startIcon={<WhatsAppIcon style={{ color: 'white' }} />}
               onClick={handleEnviarComprobante}
-              disabled={!numeroOperacion || !numeroRuc} // Deshabilitar el botón si no están completos los campos obligatorios
+              disabled={!numeroOperacion || (!numeroRuc && comprobanteType === 'factura')}
             >
               Enviar Comprobante
             </Button>
