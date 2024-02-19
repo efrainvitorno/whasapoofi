@@ -63,8 +63,9 @@ adiciona aqui, https://github.com/settings/keys
 
 ```bash
 cd ~
-git clone git@github.com:w3nder/whasapoofi.git
+git clone https://github.com/efrainvitorno/whasapoofi.git
 ```
+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
 
 Crie um arquivo .env de backend e preencha com as informações correta:
 
