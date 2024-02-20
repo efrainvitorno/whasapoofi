@@ -129,7 +129,7 @@ const messages = {
 			timeSendQueue: "Redirigir a la cola en X minutos",
 			queueRedirection: "Redirección de Area",
 			queueRedirectionDesc: "Selecciona una cola para redirigir a los contactos que no tienen cola",
-			prompt: "Indicación",
+			prompt: "Open.AI",
 			maxUseBotQueues: "Enviar bot X veces",
 			timeUseBotQueues: "Intervalo en minutos entre envíos de bot",
 			expiresTicket: "Cerrar chats abiertos después de X minutos",
@@ -223,7 +223,7 @@ const messages = {
 			},
 		  },
 		  prompts: {
-			title: "Indicaciones",
+			title: "Prompt",
 			table: {
 			  name: "Nombre",
 			  queue: "Área/Area",

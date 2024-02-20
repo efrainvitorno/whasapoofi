@@ -280,7 +280,7 @@ const MainListItems = (props) => {
               }}
               inset
               color="inherit">
-              {i18n.t("servicio")}
+              {i18n.t("Panel")}
             </ListSubheader>
             <>
 
