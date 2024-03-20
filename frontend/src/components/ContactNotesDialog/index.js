@@ -92,7 +92,7 @@ export default function ContactNotesDialog ({ modalOpen, onClose, ticket }) {
             })
             await loadNotes()
             setNewNote({ note: '' })
-            toast.success('Observação adicionada com sucesso!')
+            toast.success('Nota agregada exitosamente!')
         } catch (e) {
             toast.error(e)
         }
