@@ -10,6 +10,7 @@ interface UserData {
   password?: string;
   name?: string;
   profile?: string;
+  isTricked?: boolean;
   companyId?: number;
   queueIds?: number[];
   whatsappId?: number;
@@ -51,7 +52,7 @@ const UpdateUserService = async ({
     password: Yup.string()
   });
 
-  const { email, password, profile, name, queueIds = [], whatsappId } = userData;
+  const { email, password, profile, name, isTricked, queueIds = [], whatsappId } = userData;
 
   try {
     await schema.validate({ email, password, profile, name });
@@ -63,6 +64,7 @@ const UpdateUserService = async ({
     email,
     password,
     profile,
+    isTricked,
     name,
     whatsappId: whatsappId || null,
 

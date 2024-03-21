@@ -146,7 +146,7 @@ export default function ContactNotesDialog ({ modalOpen, onClose, ticket }) {
                 onClose={setShowOnDeleteDialog}
                 onConfirm={handleDelete}
             >
-                Deseja realmente excluir este registro?
+                Desea realmente eliminar este registro?
             </ConfirmationModal>
             <Dialog
                 open={open}

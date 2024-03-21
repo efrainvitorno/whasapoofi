@@ -74,6 +74,7 @@ const UserModal = ({ open, onClose, userId }) => {
 		email: "",
 		password: "",
 		profile: "user",
+		isTricked: "enabled",
 	};
 
 	const { user: loggedInUser } = useContext(AuthContext);
@@ -249,6 +250,36 @@ const UserModal = ({ open, onClose, userId }) => {
 										</FormControl>
 									)}
 								/>
+								<FormControl
+									variant="outlined"
+									className={classes.formControl}
+									margin="dense"
+								>
+									<Can
+										role={loggedInUser.profile}
+										perform="user-modal:editProfile"
+										yes={() => (
+											<>
+												<InputLabel id="isTricked-selection-input-label">
+													{i18n.t("Ver contactos")}
+												</InputLabel>
+
+												<Field
+													as={Select}
+													label={i18n.t("Ver Contactos")}
+													name="isTricked"
+													labelId="isTricked-selection-label"
+													id="isTricked-selection"
+												>
+													<MenuItem value="enabled">{i18n.t("Habilitado")}</MenuItem>
+													<MenuItem value="disabled">{i18n.t("Desactivado")}</MenuItem>
+												</Field>
+											</>
+										)}
+									/>
+								</FormControl>
+
+								
 							</DialogContent>
 							<DialogActions>
 								<Button
