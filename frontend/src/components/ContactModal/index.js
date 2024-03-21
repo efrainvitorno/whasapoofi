@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext} from "react";
 
 import * as Yup from "yup";
 import { Formik, FieldArray, Form, Field } from "formik";
@@ -21,6 +21,7 @@ import { i18n } from "../../translate/i18n";
 
 import api from "../../services/api";
 import toastError from "../../errors/toastError";
+import { AuthContext } from "../../context/Auth/AuthContext";
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -64,6 +65,7 @@ const ContactSchema = Yup.object().shape({
 const ContactModal = ({ open, onClose, contactId, initialValues, onSave }) => {
 	const classes = useStyles();
 	const isMounted = useRef(true);
+	const { user } = useContext(AuthContext);
 
 	const initialState = {
 		name: "",
@@ -162,6 +164,7 @@ const ContactModal = ({ open, onClose, contactId, initialValues, onSave }) => {
 									margin="dense"
 									className={classes.textField}
 								/>
+								{user.isTricked === "enabled" ?
 								<Field
 									as={TextField}
 									label={i18n.t("contactModal.form.number")}
@@ -172,6 +175,8 @@ const ContactModal = ({ open, onClose, contactId, initialValues, onSave }) => {
 									variant="outlined"
 									margin="dense"
 								/>
+								: ""
+								}	
 								<div>
 									<Field
 										as={TextField}
