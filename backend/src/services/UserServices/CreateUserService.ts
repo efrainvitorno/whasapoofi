@@ -10,6 +10,7 @@ interface Request {
   email: string;
   password: string;
   name: string;
+  isTricked?: boolean;
   queueIds?: number[];
   companyId?: number;
   profile?: string;
@@ -29,6 +30,7 @@ const CreateUserService = async ({
   name,
   queueIds = [],
   companyId,
+  isTricked,
   profile = "admin",
   whatsappId
 }: Request): Promise<Response> => {
@@ -86,6 +88,7 @@ const CreateUserService = async ({
       password,
       name,
       companyId,
+      isTricked,
       profile,
       whatsappId: whatsappId || null,
     },

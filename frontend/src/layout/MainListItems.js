@@ -303,14 +303,10 @@ const MainListItems = (props) => {
               )}
               <ListItemLink
                 to="/todolist"
-                primary={i18n.t("Mis Treas")}
+                primary={i18n.t("Mis Tareas")}
                 icon={<BorderColorIcon />}
               />
-              <ListItemLink
-                to="/contacts"
-                primary={i18n.t("mainDrawer.listItems.contacts")}
-                icon={<ContactPhoneOutlinedIcon />}
-              />
+              
               {showSchedules && (
                 <>
                   <ListItemLink
@@ -463,6 +459,7 @@ const MainListItems = (props) => {
                 </Badge>
               }
             />
+            
             <ListItemLink
               to="/files"
               primary={i18n.t("mainDrawer.listItems.files")}
@@ -568,6 +565,7 @@ const MainListItems = (props) => {
                 primary={i18n.t("mainDrawer.listItems.annoucements")}
                 icon={<AnnouncementIcon />}
               />
+              
             )}
             {showOpenAi && (
               <ListItemLink
@@ -598,6 +596,11 @@ const MainListItems = (props) => {
               primary={i18n.t("mainDrawer.listItems.files")}
               icon={<AttachFile />}
             />
+            <ListItemLink
+                to="/contacts"
+                primary={i18n.t("mainDrawer.listItems.contacts")}
+                icon={<ContactPhoneOutlinedIcon />}
+              />
             <ListItemLink
               to="/queues"
               primary={i18n.t("mainDrawer.listItems.queues")}
