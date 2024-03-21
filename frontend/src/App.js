@@ -57,25 +57,25 @@ const App = () => {
                 light: { main: mode === "light" ? "#F3F3F3" : "#333333" },
                 tabHeaderBackground: mode === "light" ? "#EEE" : "#333",
                 optionsBackground: mode === "light" ? "#fafafa" : "#333",
-				options: mode === "light" ? "#fafafa" : "#666",
-				fontecor: mode === "light" ? "#00BFFF" : "#fff",
+                options: mode === "light" ? "#fafafa" : "#666",
+                fontecor: mode === "light" ? "#00BFFF" : "#fff",
                 fancyBackground: mode === "light" ? "#fafafa" : "#333",
-				bordabox: mode === "light" ? "#eee" : "#333",
-				newmessagebox: mode === "light" ? "#eee" : "#333",
-				inputdigita: mode === "light" ? "#fff" : "#333",
-				contactdrawer: mode === "light" ? "#fff" : "#333",
-				announcements: mode === "light" ? "#ededed" : "#333",
-				login: mode === "light" ? "#fff" : "#1C1C1C",
-				announcementspopover: mode === "light" ? "#fff" : "#333",
-				chatlist: mode === "light" ? "#eee" : "#333",
-				boxlist: mode === "light" ? "#ededed" : "#333",
-				boxchatlist: mode === "light" ? "#ededed" : "#333",
+                bordabox: mode === "light" ? "#eee" : "#333",
+                newmessagebox: mode === "light" ? "#eee" : "#333",
+                inputdigita: mode === "light" ? "#fff" : "#333",
+                contactdrawer: mode === "light" ? "#fff" : "#333",
+                announcements: mode === "light" ? "#ededed" : "#333",
+                login: mode === "light" ? "#fff" : "#1C1C1C",
+                announcementspopover: mode === "light" ? "#fff" : "#333",
+                chatlist: mode === "light" ? "#eee" : "#333",
+                boxlist: mode === "light" ? "#ededed" : "#333",
+                boxchatlist: mode === "light" ? "#ededed" : "#333",
                 total: mode === "light" ? "#fff" : "#222",
                 messageIcons: mode === "light" ? "grey" : "#F3F3F3",
                 inputBackground: mode === "light" ? "#FFFFFF" : "#333",
                 barraSuperior: mode === "light" ? "linear-gradient(to right, #00BFFF, #0000FF, #00008B)" : "#666",
-				boxticket: mode === "light" ? "#EEE" : "#333",
-				campaigntab: mode === "light" ? "#ededed" : "#333",
+                boxticket: mode === "light" ? "#EEE" : "#333",
+                campaigntab: mode === "light" ? "#ededed" : "#333",
             },
             mode,
         },
@@ -87,7 +87,7 @@ const App = () => {
         const browserLocale =
             i18nlocale.substring(0, 2) + i18nlocale.substring(3, 5);
 
-        if (browserLocale === "ptBR") {
+        if (browserLocale === "es") {
             setLocale(ptBR);
         }
     }, []);
