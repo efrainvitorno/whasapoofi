@@ -50,6 +50,10 @@ class User extends Model<User> {
   @Column
   profile: string;
 
+  @Default("enabled")
+  @Column
+  isTricked: string; 
+
   @Column
   super: boolean;
 
