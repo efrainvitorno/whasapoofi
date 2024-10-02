@@ -18,7 +18,7 @@ sudo apt update && sudo apt upgrade
 Instale o node (16.x) e confirme se o comando do node -v e npm -v está disponível:
 
 ```bash
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node -v
 npm -v
